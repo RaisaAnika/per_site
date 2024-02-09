@@ -1,9 +1,10 @@
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Portfolio</title>
+    <title>Home</title>
     <style>
         /* Style the navigation bar */
         .navbar {
@@ -31,22 +32,21 @@
             color: black;
         }
 
+        /* Set the background image */
+        body {
+            background-image: url("{% static 'background/home.png' %}");
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            height: 100vh; /* Set height to fill the entire viewport */
+            margin: 0; /* Remove default margin */
+            padding-top: 60px; /* Adjust padding to accommodate the fixed navbar */
+            font-family: Arial, sans-serif; /* Specify font family */
+        }
+
         /* Main content styles */
-        .content {
-            margin-top: 60px; /* Adjust according to the height of the navbar */
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-
-        /* Additional styles */
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #555;
+        h1, p {
+            text-align: center; /* Center align the text */
+            color: #fff; /* Set text color to white */
         }
     </style>
 </head>
@@ -60,11 +60,9 @@
     <a href="{% url 'volunteer_work' %}">Volunteering</a>
 </div>
 
-<!-- Main content -->
-<div class="content">
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is the homepage of my portfolio website. Explore the sections from the menu to learn more about me and my projects.</p>
-</div>
+<!-- Content of the home page goes here -->
+<h1>Welcome to My Portfolio</h1>
+<p>This is the homepage of my portfolio website. Explore the sections from the menu to learn more about me and my projects.</p>
 
 </body>
 </html>
