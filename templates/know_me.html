@@ -1,4 +1,4 @@
-
+{% comment %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,3 +14,9 @@
     <!-- Add additional content specific to the "Know Me" section if needed -->
 </body>
 </html>
+<ul>
+    <li><a href="{% url 'hi' %}">Hi</a></li>
+    <li><a href="{% url 'my_projects' %}">My Projects</a></li>
+    <li><a href="{% url 'volunteer_work' %}">Volunteer Work</a></li>
+    <li><a href="{% url 'education_history' %}">Education History</a></li>
+</ul> {% endcomment %}

@@ -17,7 +17,7 @@
     <li><a href="{% url 'volunteer_work' %}">Volunteer Work</a></li>
     <li><a href="{% url 'education_history' %}">Education History</a></li>
 </ul> {% endcomment %}
-
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,15 +46,37 @@
             background-color: #ddd;
             color: black;
         }
+
+        /* Set the background image */
+        
+        body {
+            background-image: url("{% static 'background/home.png' %}");
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            height: 100vh; /* Set height to fill the entire viewport */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Optional: Specify font family */
+        }
+        
+        {% comment %} body {
+            background-image: url("/assets/background/home.png");
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            height: 100%; /* Set height to fill the entire viewport */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Optional: Specify font family */
+        } {% endcomment %}
     </style>
 </head>
 <body>
 
 <!-- Navigation bar -->
 <div class="navbar">
-    {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
+    <a href="{% url 'home' %}">Home</a>
     <a href="{% url 'my_resume' %}">My Resume</a>
-    <a href="{% url 'know_me' %}">Know Me</a>
+    {% comment %} <a href="{% url 'know_me' %}">Know Me</a> {% endcomment %}
 </div>
 
 <!-- Content of the home page goes here -->
